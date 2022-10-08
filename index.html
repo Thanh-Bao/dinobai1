@@ -1,137 +1,251 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial;
+    }
+
+    /* Style the tab */
+    .tab {
+      position: sticky;
+      top: 0;
+      display: flex;
+      justify-content: center;
+      overflow: hidden;
+      border: 1px solid #ccc;
+      background-color: #f1f1f1;
+    }
+
+    /* Style the buttons inside the tab */
+    .tab button {
+      background-color: inherit;
+      float: left;
+      border: solid 1px rgb(121, 120, 120);
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      transition: 0.3s;
+      font-size: 17px;
+
+    }
+
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+      background-color: #ddd;
+    }
+
+    /* Create an active/current tablink class */
+    .tab button.active {
+      background-color: rgb(239, 149, 149);
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+      display: none;
+      padding: 6px 12px;
+      /* border: 1px solid #ccc; */
+      border-top: none;
+    }
+
+
+    @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+    body {
+      font-family: 'Nunito', sans-serif;
+    }
+
+    #container {
+      display: flex;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    #container>div>#highlight {
+      font-size: 50px;
+    }
+
+    #container:hover #highlight {
+      color: rgb(255, 60, 0);
+    }
+  </style>
 </head>
 
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
-
-  body {
-    font-family: 'Nunito', sans-serif;
-  }
-
-  #container {
-    display: flex;
-    justify-content: center;
-    font-weight: bold;
-  }
-
-  #container>div>#highlight {
-    font-size: 50px;
-  }
-
-  #container:hover #highlight {
-    color: rgb(255, 60, 0);
-  }
-</style>
-
 <body>
-  <h1>Lesson 1 - dinosaur</h1>
-  <div id="container">
-    <div>
+
+  <h4 style="text-align: center;">Chọn lớp học</h4>
+  <p></p>
+
+  <div class="tab">
+    <button class="tablinks" id="FIRST_CLICK" onclick="openCity(event, 'GB')">Game Basic</button>
+    <button class="tablinks" onclick="openCity(event, 'GA')">Game Advanced</button>
+    <button class="tablinks" onclick="openCity(event, 'GI')">Game Intensive</button>
+  </div>
+
+  <!-- *************************************************************************************** -->
+  <div id="GB" class="tabcontent">
+    <h1>Lesson - Space Shooter</h1>
+    <div id="container">
       <div>
-        <img width="250px" src="/img1.png" />
+        <div>
+          <img width="250px" src="/spaceShips_001.png" />
+        </div>
+        <p style="text-align:center">
+          hình ảnh cho game
+        </p>
+        <a id="highlight" href="/Space_shooter.zip">DOWNLOAD</a>
       </div>
-      <p style="text-align:center">
-        hình ảnh cho game
-      </p>
-      <a id="highlight" href="/Material_bai1.zip">DOWNLOAD</a>
     </div>
-  </div>
 
-  <div style="display: flex; justify-content: center; margin-top: 50px">
-    <div>download phần mền game maker nếu chưa cài </div>
-    <div>
-      <a href="https://drive.google.com/file/d/11izvh0S5M98c-PkUPGv7MzZBDa_iCgwW"> Download</a>
+    <div style="display: flex; justify-content: center; margin-top: 50px">
+      <div>download phần mền game maker nếu chưa cài <span style="margin-left: 10px"></span> </div>
+      <div>
+        <a href="https://drive.google.com/file/d/11izvh0S5M98c-PkUPGv7MzZBDa_iCgwW"> Download</a>
+      </div>
     </div>
+
+    <hr style="margin-top: 50px;">
   </div>
+  <!-- *************************************************************************************** -->
 
-  <hr style="margin-top: 50px;">
 
-  <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ LESSON 2 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
-
-  <h1>Lesson 2,3 - Duck hunt</h1>
-  <div id="container">
-    <div>
-      <div style="text-align:center; margin-bottom: 50px">
-        <a style="text-decoration: none;" href="https://www.crazygames.com/game/duck-hunt"> 🦆Click để chơi thử game
-          🐕</a>
-      </div>
+  <!-- *************************************************************************************** -->
+  <div id="GA" class="tabcontent">
+    <h1>Lesson 1 - dinosaur</h1>
+    <div id="container">
       <div>
-        <img width="250px" src="/img234.png" />
+        <div>
+          <img width="250px" src="/img1.png" />
+        </div>
+        <p style="text-align:center">
+          hình ảnh cho game
+        </p>
+        <a id="highlight" href="/Material_bai1.zip">DOWNLOAD</a>
       </div>
-      <p style="text-align:center">
-        hình ảnh cho game
-      </p>
-      <a id="highlight" href="/Material_2+3+4.zip">DOWNLOAD</a>
-
-
-      <hr style="margin-top: 100px; z-index: 99;">
-      <div style="margin-top: 15px;">
-        <a id="videoHuongDan" href="https://www.youtube.com/watch?v=UumI3V73P7c">📺 Video hướng dẫn </a>
-      </div>
-      <hr style="margin-top: 15px; z-index: 99;">
-      <div style="margin-top: 15px;">
-        <a href="/duck_hunt_summary_diagram.png">🖼 Sơ đồ tóm tắt </a>
-      </div>
-
-      <hr style="margin-top: 20px; z-index: 99;">
-      <div>
-        <a href="/L2DuckHunt.gmz">⬇️ project Lession 2 - L2DuckHunt.gmz</a>
-      </div>
-      <div>
-        <a href="/L3DuckHunt.gmz">⬇️ project Lession 3 - L3DuckHunt.gmz</a>
-      </div>
-
     </div>
-  </div>
-  <div style="display: flex; justify-content: center; margin-top: 50px">
 
-  </div>
+    <div style="display: flex; justify-content: center; margin-top: 50px">
+      <div>download phần mền game maker nếu chưa cài </div>
+      <div>
+        <a href="https://drive.google.com/file/d/11izvh0S5M98c-PkUPGv7MzZBDa_iCgwW"> Download</a>
+      </div>
+    </div>
 
-  <hr style="margin-top: 50px;">
-  <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ LESSON 6 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <hr style="margin-top: 50px;">
 
-  <h1>Lesson 6,7,8 - Ninja Attack </h1>
-  <div id="container">
-    <div>
-      <div style=" margin-bottom: 50px">
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ LESSON 2 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 
-        <span style="display: block; margin-bottom: 20px; font-weight: 400;">-chuẩn bị hình ảnh:</span>
-
-        <a style="text-decoration: none; display: block;" href="https://www.piskelapp.com">- piskelapp.com (vẽ
-          sprite).</a>
-        <a style="text-decoration: none; display: block;" href="https://www.remove.bg">- remove.bg (Xóa nền, chuyển
-          thành
-          ảnh png).</a>
-        <a style="text-decoration: none; display: block;" href="https://imagecolorpicker.com/en">-
-          imagecolorpicker.com
-          (lấy mã màu từ
-          ảnh có sẵn).</a>
-
-        <span style="display: block; margin-bottom: 20px; font-weight: 400; margin-top: 50px;">-Hoặc download hình ảnh
-          có sẵn tại
-          đây:</span>
-
-        <!-- <div>
+    <h1>Lesson 2,3 - Duck hunt</h1>
+    <div id="container">
+      <div>
+        <div style="text-align:center; margin-bottom: 50px">
+          <a style="text-decoration: none;" href="https://www.crazygames.com/game/duck-hunt"> 🦆Click để chơi thử game
+            🐕</a>
+        </div>
+        <div>
           <img width="250px" src="/img234.png" />
-        </div> -->
+        </div>
+        <p style="text-align:center">
+          hình ảnh cho game
+        </p>
+        <a id="highlight" href="/Material_2+3+4.zip">DOWNLOAD</a>
 
-        <a id="highlight" style="margin-left: 80px;" href="/Material_6+7+8.zip">DOWNLOAD</a>
+
+        <hr style="margin-top: 100px; z-index: 99;">
+        <div style="margin-top: 15px;">
+          <a id="videoHuongDan" href="https://www.youtube.com/watch?v=UumI3V73P7c">📺 Video hướng dẫn </a>
+        </div>
+        <hr style="margin-top: 15px; z-index: 99;">
+        <div style="margin-top: 15px;">
+          <a href="/duck_hunt_summary_diagram.png">🖼 Sơ đồ tóm tắt </a>
+        </div>
+
+        <hr style="margin-top: 20px; z-index: 99;">
+        <div>
+          <a href="/L2DuckHunt.gmz">⬇️ project Lession 2 - L2DuckHunt.gmz</a>
+        </div>
+        <div>
+          <a href="/L3DuckHunt.gmz">⬇️ project Lession 3 - L3DuckHunt.gmz</a>
+        </div>
 
       </div>
-
+    </div>
+    <div style="display: flex; justify-content: center; margin-top: 50px">
 
     </div>
-  </div>
-  <div style="display: flex; justify-content: center; margin-top: 50px">
+
+    <hr style="margin-top: 50px;">
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ LESSON 6 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+    <h1>Lesson 6,7,8 - Ninja Attack </h1>
+    <div id="container">
+      <div>
+        <div style=" margin-bottom: 50px">
+
+          <span style="display: block; margin-bottom: 20px; font-weight: 400;">-chuẩn bị hình ảnh:</span>
+
+          <a style="text-decoration: none; display: block;" href="https://www.piskelapp.com">- piskelapp.com (vẽ
+            sprite).</a>
+          <a style="text-decoration: none; display: block;" href="https://www.remove.bg">- remove.bg (Xóa nền, chuyển
+            thành
+            ảnh png).</a>
+          <a style="text-decoration: none; display: block;" href="https://imagecolorpicker.com/en">-
+            imagecolorpicker.com
+            (lấy mã màu từ
+            ảnh có sẵn).</a>
+
+          <span style="display: block; margin-bottom: 20px; font-weight: 400; margin-top: 50px;">-Hoặc download hình ảnh
+            có sẵn tại
+            đây:</span>
+
+          <!-- <div>
+              <img width="250px" src="/img234.png" />
+            </div> -->
+
+          <a id="highlight" style="margin-left: 80px;" href="/Material_6+7+8.zip">DOWNLOAD</a>
+
+        </div>
+
+
+      </div>
+    </div>
+    <div style="display: flex; justify-content: center; margin-top: 50px">
+
+    </div>
 
   </div>
+  <!-- *************************************************************************************** -->
+
+  <!-- *************************************************************************************** -->
+  <div id="GI" class="tabcontent">
+    <h3>GI</h3>
+    <p>GI đang cập nhật.</p>
+  </div>
+  <!-- *************************************************************************************** -->
+
+  <script>
+
+    window.onload = () => {
+      console.log("0000");
+      document.getElementById('FIRST_CLICK').click();
+    }
+
+    function openCity(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+  </script>
 
 </body>
 
